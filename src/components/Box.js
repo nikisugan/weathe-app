@@ -37,7 +37,7 @@ const Box = (props) => {
     }
 
     return (
-        <div>000000
+        <div>
             <div style={
                 {
                     background: '#000000d0',
