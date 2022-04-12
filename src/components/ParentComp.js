@@ -26,7 +26,7 @@ function ParentComp() {
                     alignItems: 'center',
                     height: '100vh',
                     margin: '0',
-                    backgroundImage: `url('${appUrl}/img/${imageNumber}.png')`
+                    backgroundImage: `url('${appUrl}/img/${imageNumber}.jpg')`
                     }}
                 >
                 <Box weatherData = {weather} />
