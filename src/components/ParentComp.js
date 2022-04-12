@@ -9,7 +9,7 @@ function ParentComp() {
     useEffect(()=> {
         // getRandomInt()
         setImageNumber(getRandomInt())
-        console.log('hey', getRandomInt())
+        // console.log('hey', getRandomInt())
         },[]
     )
     function getRandomInt() {
