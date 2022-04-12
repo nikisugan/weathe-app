@@ -5,6 +5,7 @@ import Box from './Box'
 function ParentComp() {
     const weather = {};
     const [imageNumber, setImageNumber] = useState('https:/source.unsplash.com/1920x1080/?landscape')
+    const appUrl = 'https://nikisugan.github.io/weather-app';
     useEffect(()=> {
         // getRandomInt()
         setImageNumber(getRandomInt())
@@ -13,7 +14,7 @@ function ParentComp() {
     )
     function getRandomInt() {
         const min = Math.ceil(1);
-        const max = Math.floor(13);
+        const max = Math.floor(12);
         return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
       }
     return (
@@ -25,7 +26,7 @@ function ParentComp() {
                     alignItems: 'center',
                     height: '100vh',
                     margin: '0',
-                    backgroundImage: `url('img/${imageNumber}.png')`
+                    backgroundImage: `url('${appUrl}/img/${imageNumber}.png')`
                     }}
                 >
                 <Box weatherData = {weather} />
