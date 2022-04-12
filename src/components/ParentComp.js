@@ -4,8 +4,9 @@ import Box from './Box'
 
 function ParentComp() {
     const weather = {};
-    const [imageNumber, setImageNumber] = useState('https:/source.unsplash.com/1920x1080/?landscape')
+    const [imageNumber, setImageNumber] = useState('')
     const appUrl = 'https://nikisugan.github.io/weather-app';
+    
     useEffect(()=> {
         // getRandomInt()
         setImageNumber(getRandomInt())

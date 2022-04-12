@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import Swal from 'sweetalert2'
+
 
 
 const Box = (props) => {
@@ -26,11 +28,17 @@ const Box = (props) => {
             const { humidity,temp } = data.main
             const { description, icon } = data.weather[0]
             const { speed } = data.wind
-            setDatasFunction({city,temp,humidity,speed,description,icon,speed});
+            setDatasFunction({city,temp,humidity,speed,description,icon});
 
         } catch (error) {
             console.log('error', error);
-            alert('City not found, Please try again');
+            Swal.fire({
+                title: 'Invalid City!',
+                text: 'Please input a valid City',
+                icon: 'error',
+                showConfirmButton: false,
+                timer: 2000
+            })
         }
     };
     const setDatasFunction = tempData => {
@@ -96,7 +104,7 @@ const Box = (props) => {
                     <img src={`https://openweathermap.org/img/wn/${datas.icon}.png`} alt='' className='icon'/>
                     <div className='description'></div>
                     <div className='humidity'>Humidity: {datas.humidity}</div>
-                    <div className='wind'>Wind speed: {datas.speed} km/h</div>
+                    <div className='wind'>Wind speed: {datas.spe} km/h</div>
                 </div>
             </div>
         </div>
