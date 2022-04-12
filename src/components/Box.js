@@ -30,6 +30,7 @@ const Box = (props) => {
 
         } catch (error) {
             console.log('error', error);
+            alert('City not found, Please try again');
         }
     };
     const setDatasFunction = tempData => {
